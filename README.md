@@ -44,4 +44,4 @@ Navigate to **Settings > GB Cache** in your WordPress admin dashboard.
   * The user has a designated WordPress login cookie (`wordpress_logged_in_`, etc.).
 * **Version:** 1.8
 * **Author:** Tyson
-* **License:** GPLv2
+* **License:** MIT License
