@@ -344,6 +344,39 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.php [L]
 </IfModule>
 # END WordPress
+
+## EXPIRES CACHING ##
+<IfModule mod_expires.c>
+    ExpiresActive On
+
+    # Set default cache time (Fallback)
+    ExpiresDefault "access plus 2 days"
+
+    # Set Cache-Control for image types
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+
+    # Set Cache-Control for CSS/JS
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType text/javascript "access plus 1 year"
+
+    # Set Cache-Control for Fonts
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType application/x-font-woff "access plus 1 year"
+    ExpiresByType application/x-font-ttf "access plus 1 year"
+
+    # Video Caching
+    ExpiresByType video/mp4 "access plus 1 year"
+    ExpiresByType video/webm "access plus 1 year"
+    ExpiresByType video/ogg "access plus 1 year"
+    ExpiresByType video/mpeg "access plus 1 year"
+</IfModule>
+## END EXPIRES CACHING ##
 EOD;
 
         file_put_contents($htaccess_file, $htaccess_content);
