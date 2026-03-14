@@ -4,8 +4,8 @@
  * Description: Server-Level static HTML cache with Admin UI for exclusions, WP-Cron CF7 handling, and Cache Warming.
  * Version: 1.8
  * Author: Tyson
- * License: GPL2
- * License URI: https://www.gnu.org/licenses/gpl-2.0.html
+ * License: MIT License
+ * License URI: https://opensource.org/licenses/MIT
  * Author URI: https://github.com/tysonchamp/
  */
 
